@@ -1,3 +1,6 @@
+<p align="center"><a href="#zh">🇨🇳 中文</a> &nbsp;|&nbsp; <a href="#en">🇬🇧 English</a></p>
+<a id="zh"></a>
+
 # robot_retargeter
 
 English | [中文](README_zh.md)
@@ -330,6 +333,8 @@ In `robot_retarget.py`, for contact-active feet (or configured contact bodies), 
 3. This constraint is added as an extra `FrameTask` in optimization, weighted by `contact_pos_fixed_factor`.
 
 This significantly reduces foot sliding during support phase while preserving motion freedom during swing phase.
+
+<a id="en"></a>
 
 ## English
 
