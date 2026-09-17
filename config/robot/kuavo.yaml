@@ -1,0 +1,153 @@
+robot_xml_path: "asset/robot/biped_s53/xml/biped_s53.xml"
+verbose: True
+render_debug: False
+keypoints_path: "output_data/keypoints/kuavo/dance1_subject2_from_g1_keypoints.pkl"
+joints_limit_offset_degrees:
+  knee_joint: [10.0, 0.0]
+  elbow_joint: [20.0, 0.0]
+knee_angle_offset_degrees: 15.0
+
+robot_links:
+  left_hip: [hips_sphere, leg_l1_link]
+  left_thigh: [leg_l1_link, leg_l4_link]
+  left_calf: [leg_l4_link, leg_l6_link]
+
+  right_hip: [hips_sphere, leg_r1_link]
+  right_thigh: [leg_r1_link, leg_r4_link]
+  right_calf: [leg_r4_link, leg_r6_link]
+
+  neck: [hips_sphere, neck_sphere]
+  head: [neck_sphere, zhead_2_link]
+
+  left_shoulder: [neck_sphere, zarm_l2_link]
+  left_arm: [zarm_l2_link, zarm_l4_link]
+  left_fore_arm: [zarm_l4_link, zarm_l7_link]
+
+  right_shoulder: [neck_sphere, zarm_r2_link]
+  right_arm: [zarm_r2_link, zarm_r4_link]
+  right_fore_arm: [zarm_r4_link, zarm_r7_link]
+
+contact_links: [left_foot_end_link, left_toe_link, 
+                right_foot_end_link, right_toe_link, 
+                zarm_l7_link, zarm_r7_link]
+
+contact_vel_calculate_window: 6
+contact_vel_threshold: 0.5
+contact_height_threshold: 0.025
+contact_height_lpf_alpha: 0.15
+contact_pos_fixed_factor: 15.0
+
+ik_match_table: {
+  "hips_mean": ["hips_sphere", 100, 0],  
+
+  "left_hip": ["leg_l1_link", 30, 3],
+  "left_thigh": ["leg_l4_link", 0.0, 3.0],
+  "left_calf": ["leg_l6_link", 30, 3],
+
+  "right_hip": ["leg_r1_link", 30, 3],
+  "right_thigh": ["leg_r4_link", 0.0, 3.0],
+  "right_calf": ["leg_r6_link", 30, 3],
+
+  "head": ["zhead_2_link", 0.0, 3.0],
+
+  "left_shoulder": ["zarm_l2_link", 30, 3],
+  "left_arm": ["zarm_l4_link", 10.0, 3.0],
+  "left_fore_arm": ["zarm_l7_link", 10, 1],
+
+  "right_shoulder": ["zarm_r2_link", 30, 3],
+  "right_arm": ["zarm_r4_link", 10.0, 3.0],
+  "right_fore_arm": ["zarm_r7_link", 10, 1]
+
+}
+
+key_frame_config:
+  hips_mean:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  left_up_leg:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  left_leg:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  left_foot:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  right_up_leg:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  right_leg:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  right_foot:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  shoulder_mean:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  left_arm:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [0.0, 1.0, 0.0]
+      z: [-1.0, 0.0, 0.0]
+  left_fore_arm:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [0.0, 1.0, 0.0]
+      z: [-1.0, 0.0, 0.0]
+  left_hand:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [0.0, 1.0, 0.0]
+      z: [-1.0, 0.0, 0.0]
+  right_arm:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [0.0, -1.0, 0.0]
+      z: [1.0, 0.0, 0.0]
+  right_fore_arm:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [0.0, -1.0, 0.0]
+      z: [1.0, 0.0, 0.0]
+  right_hand:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [0.0, -1.0, 0.0]
+      z: [1.0, 0.0, 0.0]
+  head:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]

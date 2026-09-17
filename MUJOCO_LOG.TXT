@@ -1,0 +1,24 @@
+WARNING Wed Sep  9 12:00:52 2026: Attach conflict when attaching 'lens110_21dof' to 'multi_robot', policy is 'warning'
+integrator: parent has 0 (default), child has 3, keeping parent value
+solver: parent has 2 (default), child has 0, keeping parent value
+njmax: parent has -1 (default), child has 500, keeping parent value
+nconmax: parent has -1 (default), child has 100, keeping parent value
+
+WARNING Wed Sep  9 13:45:50 2026: Attach conflict when attaching 'lens110_21dof' to 'multi_robot', policy is 'warning'
+integrator: parent has 0 (default), child has 3, keeping parent value
+solver: parent has 2 (default), child has 0, keeping parent value
+njmax: parent has -1 (default), child has 500, keeping parent value
+nconmax: parent has -1 (default), child has 100, keeping parent value
+
+WARNING Wed Sep  9 13:46:02 2026: Attach conflict when attaching 'lens110_21dof' to 'multi_robot', policy is 'warning'
+integrator: parent has 0 (default), child has 3, keeping parent value
+solver: parent has 2 (default), child has 0, keeping parent value
+njmax: parent has -1 (default), child has 500, keeping parent value
+nconmax: parent has -1 (default), child has 100, keeping parent value
+
+WARNING Wed Sep  9 13:52:24 2026: Attach conflict when attaching 'lens110_21dof' to 'multi_robot', policy is 'warning'
+integrator: parent has 0 (default), child has 3, keeping parent value
+solver: parent has 2 (default), child has 0, keeping parent value
+njmax: parent has -1 (default), child has 500, keeping parent value
+nconmax: parent has -1 (default), child has 100, keeping parent value
+
